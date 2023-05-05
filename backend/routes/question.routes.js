@@ -9,17 +9,10 @@ quesRouter.post("/createquestion",authenticate,async(req,res)=>{
 const payload = req.body
 const question = new QueModel(payload)
 await question.save()
-
-     
-        res.send("question created")
+    
+        res.send({msg:"question created"})
 
 })
-
-
-
-
-
-
 
 
 quesRouter.get("/allquestions",authenticate,async(req,res)=>{
@@ -30,16 +23,15 @@ quesRouter.get("/allquestions",authenticate,async(req,res)=>{
     })
 
 
-
-
-
-
-
-
 quesRouter.post("/answer/:id",authenticate,async(req,res)=>{
 
-const id = req.params.id;
-console.log(req.body)
+const questionid = req.params.id;
+
+const {answer,userID,name} = req.body;
+
+const result = await QueModel.updateOne({ "_id": questionid }, { $push: { "answer": { name, answer, userID} } })
+
+res.send("answer has been added")
 
 })
 
