@@ -6,10 +6,10 @@ const {quesRouter} = require("./routes/question.routes")
 const cors = require("cors")
 const app = express();
 app.use(express.json())
-app.use("/",userRouter)
-
-app.use("/",quesRouter)
 app.use(cors())
+
+app.use("/",userRouter)
+app.use("/",quesRouter)
 
 
 
