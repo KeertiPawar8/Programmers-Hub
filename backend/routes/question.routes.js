@@ -14,7 +14,6 @@ await question.save()
 
 })
 
-
 quesRouter.get("/allquestions",authenticate,async(req,res)=>{
 
     const allques = await QueModel.find();
