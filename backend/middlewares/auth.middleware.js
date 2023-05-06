@@ -18,7 +18,8 @@ else{
 
    const decoded = jwt.verify(token, process.env.JWT_SECRET)
    req.body.userID = decoded.userID
-   req.body.name = decoded.name
+   req.body.name = decoded.name;
+   req.body.time = Date.now();
       next()
           
   

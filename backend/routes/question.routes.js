@@ -22,17 +22,33 @@ quesRouter.get("/allquestions",authenticate,async(req,res)=>{
     })
 
 
+
+
+
 quesRouter.post("/answer/:id",authenticate,async(req,res)=>{
 
 const questionid = req.params.id;
 
-const {answer,userID,name} = req.body;
+const {answer,userID,name,time} = req.body;
 
-const result = await QueModel.updateOne({ "_id": questionid }, { $push: { "answer": { name, answer, userID} } })
+const result = await QueModel.updateOne({ "_id": questionid }, { $push: { "answer": { name, answer, userID,time} } })
 
-res.send("answer has been added")
+const allanswer = await QueModel.find({"_id":questionid});
+res.send(allanswer[0].answer)
 
 })
+
+
+
+quesRouter.get("/showans",authenticate,async(req,res)=>{
+
+    const answer = await QueModel.find({"_id":userID});
+    res.send(answer)
+    
+    })
+
+
+
 
 
 module.exports = {
