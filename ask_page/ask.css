@@ -1,0 +1,43 @@
+
+#mid{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 30%;
+}
+
+#container{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 30%;
+}
+
+#top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btncol{
+    background-color: #0a95ff;
+    color: #ffffff;
+    padding: 5px;
+    border: 0px;
+    width: 100px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+
+.btncol:hover{
+    background-color: coral;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#ask{
+    margin-top: 25px;
+}
+
+#top2{
+    display: flex;
+    justify-content: end;
+}
+
