@@ -11,73 +11,84 @@
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form  id="form" method="POST">
+				<form  id="form_signup" method="POST">
 					<label for="chk" aria-hidden="true">Sign up</label>
 					<input type="text" name="txt" placeholder="User name" required="" id="name">
-					<input type="email" name="email" placeholder="Email" required="" id="email">
-					<input type="password" name="pswd" placeholder="Password" required="" id="password">
-					<button>Sign up</button>
+					<input type="email" name="email" placeholder="Email" required="" id="email_signup">
+					<input type="password" name="pswd" placeholder="Password" required="" id="password_signup">
+					<button type="submit">Sign up</button>
 				</form>
 			</div>
 
 			<div class="login">
-				<form id="form" method="POST">
+				<form id="form_login" method="POST">
 					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="" id="email">
-					<input type="password" name="pswd" placeholder="Password" required=""  id="password">
-					<button  id="submit">Login</button>
+					<input type="email" name="email" placeholder="Email" required="" id="email_login">
+					<input type="password" name="pswd" placeholder="Password" required=""  id="password_login">
+					<button  id="submit" type="submit">Login</button>
 				</form>
 			</div>
 	</div>
 </body>
 </html>
 <script>
-     let myform=document.getElementById("form")
-    myform.addEventListener("submit",(e)=>{
+
+     let myform=document.getElementById("form_login")
+    myform.addEventListener("submit",async(e)=>{
     e.preventDefault();
-    let email=document.getElementById("email").value
-    let password=document.getElementById("password").value
+    console.log("login okay")
+    let email=document.getElementById("email_login").value
+    let password=document.getElementById("password_login").value
    
     let obj={
         email:email,
-        password:password
+        pass:password
         
     }
     console.log(obj)
    
 
-fetch("http://localhost:8080",{
+let data=await fetch("http://localhost:8080/login",{
     method:'POST',
     headers:{
         "Content-type":"application/json"
     },
     body:JSON.stringify(obj)
 })
-.then((res)=>{
-    return res.json();
-})
-.then((res)=>{
-    console.log(res);
-    localStorage.setItem("token",res.token);
-    // window.location.href = "./addposts.html";
 
-})
-.catch((err)=>{
-console.log(err);
-})
+data = await data.json()
+console.log(data)
+localStorage.setItem("token",data.token);
+    // window.location.href = "./index.html";
+// .then((res)=>{
+//     console.log(res.json())
+//     return res.json();
+// })
+// .then((res)=>{
+//     // console.log(res.token);
+//     let token=res.token;
+//     console.log(token)
+//     localStorage.setItem("token",token);
+//     window.location.href = "./index.html";
+
+// })
+// .catch((err)=>{
+// console.log(err);
+// })
 
 })
 
 
 // =========================================
 
+let myform2=document.getElementById("form_signup")
 
-
-myform.addEventListener("submit",(e)=>{
+myform2.addEventListener("submit",async(e)=>{
     e.preventDefault();
+    console.log("signup is okay")
     let name=document.getElementById("name").value
-    let email=document.getElementById("email").value
-   let password=document.getElementById("password").value
+    let email=document.getElementById("email_signup").value
+   let password=document.getElementById("password_signup").value
 
 
 
@@ -86,32 +97,35 @@ myform.addEventListener("submit",(e)=>{
         name:name,
         email:email,
     
-        password:password,
+        pass:password,
       
         
     }
     console.log(obj)
    
 
-fetch("http://localhost:8080",{
+let data= await fetch("http://localhost:8080/signup",{
     method:'POST',
     headers:{
         "Content-type":"application/json"
     },
     body:JSON.stringify(obj)
 })
-.then((res)=>{
 
-    return res.json();
-})
-.then((data)=>{
-    console.log(data);
-    // window.location.href = "./login.html";
+data= await data.json();
+console.log(data)
+// .then((res)=>{
 
-})
-.catch((err)=>{
-console.log(err);
-})
+//     return res.json();
+// })
+// .then((res)=>{
+//     console.log(res);
+//     window.location.href = "./index.html";
+
+// })
+// .catch((err)=>{
+// console.log(err);
+// })
 
 })
 </script>
