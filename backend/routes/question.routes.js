@@ -23,9 +23,19 @@ quesRouter.get("/allquestions",authenticate,async(req,res)=>{
 
 
 
+    quesRouter.get("/answer/:id",authenticate,async(req,res)=>{
+
+        const questionid = req.params.id;
+        
+    const answer = await QueModel.find({"_id":questionid})
+
+        res.send(answer)
+        })
+        
 
 
-quesRouter.post("/answer/:id",authenticate,async(req,res)=>{
+
+quesRouter.post("/addanswer/:id",authenticate,async(req,res)=>{
 
 const questionid = req.params.id;
 
@@ -34,7 +44,7 @@ const {answer,userID,name,time} = req.body;
 const result = await QueModel.updateOne({ "_id": questionid }, { $push: { "answer": { name, answer, userID,time} } })
 
 const allanswer = await QueModel.find({"_id":questionid});
-res.send(allanswer[0].answer)
+res.send(allanswer)
 
 })
 
