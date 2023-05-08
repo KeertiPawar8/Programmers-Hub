@@ -7,7 +7,9 @@ const cors = require("cors")
 const app = express();
 app.use(express.json())
 app.use(cors())
-
+app.get("/",()=>{
+    res.send("HOME PAGE")
+})
 app.use("/",userRouter)
 app.use("/",quesRouter)
 
