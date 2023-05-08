@@ -27,8 +27,14 @@ let append_data = (data) => {
     let div = document.createElement("div");
     let h1 = document.createElement("h1");
     h1.innerText = el.topic;
+    h1.onclick = (el) => {
+      localStorage.setItem("question_id", JSON.stringify(el._id));
+      window.location.href = "./afterquestion.html";
+    };
     let h2 = document.createElement("h2");
     h2.innerText = el.question;
+    let name = document.createElement("p");
+    name.innerText = el.name;
     let p = document.createElement("p");
     let timestamp = el.posted;
 
@@ -48,7 +54,7 @@ let append_data = (data) => {
     console.log(`Time: ${hours}:${minutes}`);
     p.innerText =
       `Date: ${day}-${month}-${year}` + " " + `Time: ${hours}:${minutes}`;
-    div.append(h1, h2, p);
+    div.append(h1, h2, name, p);
 
     container.append(div);
   });
