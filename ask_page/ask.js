@@ -27,10 +27,18 @@ let append_data = (data) => {
     let div = document.createElement("div");
     let h1 = document.createElement("h1");
     h1.innerText = el.topic;
-    h1.onclick = (el) => {
-      localStorage.setItem("question_id", JSON.stringify(el._id));
-      window.location.href = "./afterquestion.html";
-    };
+    // let _id = document.createElement("p");
+    // _id.innerText = el._id;
+    // console.log(_id);
+    h1.addEventListener("click", (e) => {
+      e.preventDefault();
+      myfun(el);
+    });
+    // h1.addEventListener= (_id) => {
+    //   console.log(_id);
+    //   localStorage.setItem("question_id", JSON.stringify(_id));
+    //   // window.location.href = "./afterquestion.html";
+    // };
     let h2 = document.createElement("h2");
     h2.innerText = el.question;
     let name = document.createElement("p");
@@ -61,3 +69,9 @@ let append_data = (data) => {
 };
 
 // get_data();
+
+let myfun = (data) => {
+  console.log(data._id);
+  localStorage.setItem("question_id", JSON.stringify(data._id));
+  window.location.href = "./afterquestion.html";
+};

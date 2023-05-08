@@ -223,7 +223,7 @@ outline: none;
     
 }
 
-#submit{
+#submit_post{
     
     background-color:rgb(48, 179, 239);
     border: none;
@@ -235,7 +235,7 @@ outline: none;
     cursor: pointer;
     
 }
-#submit:hover{
+#submit_post:hover{
  
     background-color: rgb(68, 122, 247);
     border: none;
@@ -250,7 +250,7 @@ outline: none;
 /* keerti css*/
 
 
-#answer{
+#answer_2{
     width:85%;
     height:25px
 }
@@ -304,7 +304,7 @@ margin-bottom: 13px;
     width:50%;
    
 }
-#answer{
+#answer_2{
     margin-top: 13px;
 margin-bottom: 13px;
 }
