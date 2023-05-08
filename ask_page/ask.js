@@ -29,8 +29,26 @@ let append_data = (data) => {
     h1.innerText = el.topic;
     let h2 = document.createElement("h2");
     h2.innerText = el.question;
+    let p = document.createElement("p");
+    let timestamp = el.posted;
 
-    div.append(h1, h2);
+    const dateObj = new Date(timestamp);
+
+    // Get the date components
+    const year = dateObj.getUTCFullYear();
+    const month = dateObj.getUTCMonth() + 1; // add 1 to get month in range of 1-12
+    const day = dateObj.getUTCDate();
+
+    // Get the time components
+    const hours = dateObj.getUTCHours();
+    const minutes = dateObj.getUTCMinutes();
+
+    // Log the date and time components separately
+    console.log(`Date: ${day}-${month}-${year}`);
+    console.log(`Time: ${hours}:${minutes}`);
+    p.innerText =
+      `Date: ${day}-${month}-${year}` + " " + `Time: ${hours}:${minutes}`;
+    div.append(h1, h2, p);
 
     container.append(div);
   });
