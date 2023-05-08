@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
 *{
     margin: 0px;
-    padding: 0%;
+  padding: 0px;
+    font-family: "Poppins", sans-serif;
     }
 
 
@@ -225,7 +229,7 @@ outline: none;
     border: none;
     border-radius: 3px;
     font-size: 10px;
-    padding: 7px;
+    padding: 8px;
     color: white;
     margin-top: 20px;
     cursor: pointer;
@@ -242,6 +246,80 @@ outline: none;
     cursor: pointer;
     
 }
+
+/* keerti css*/
+
+
+#answer{
+    width:85%;
+    height:25px
+}
+
+#topic{
+    margin-bottom: 13px;
+}
+#question{
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+#newq{
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+#askedby{
+    color:#a09388;
+display:flex;
+justify-content: space-between;
+width:40%;
+margin-top: 13px;
+margin-bottom: 13px;
+}
+
+
+
+#totalanswers{
+    margin-top: 13px;
+margin-bottom: 13px;
+}
+
+
+#last{
+        margin-bottom: 13px;
+}
+
+
+
+#askedbyanswer{
+    color:#a09388;
+display:flex;
+justify-content: space-between;
+width:50%;
+margin-top: 13px;
+margin-bottom: 13px;
+}
+
+
+#line{
+    width:50%;
+   
+}
+#answer{
+    margin-top: 13px;
+margin-bottom: 13px;
+}
+#line2{
+    margin-bottom: 13px;
+}
+
+
+
+
+
+
+/* keerti css */
+
+
 
 
 /* =============footer=================== */
