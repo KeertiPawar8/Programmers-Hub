@@ -29,7 +29,7 @@ let append_data = (data) => {
     let div = document.createElement("div");
     let h1 = document.createElement("h1");
     h1.setAttribute("class", "ans_h1");
-    h1.innerText = el.topic;
+    h1.innerText = "Topic : " + el.topic;
 
     let ans = document.createElement("div");
     ans.innerText = el.answer.length + " " + "Answers";
@@ -44,7 +44,7 @@ let append_data = (data) => {
     //   // window.location.href = "./afterquestion.html";
     // };
     let h2 = document.createElement("h3");
-    h2.innerText = el.question;
+    h2.innerText = "Question : " + el.question;
     let name = document.createElement("p");
     name.setAttribute("class", "name");
     name.innerText = "asked by" + " " + el.name;
