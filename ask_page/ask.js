@@ -28,6 +28,7 @@ let append_data = (data) => {
     answer_div.setAttribute("class", "ans_div");
     let div = document.createElement("div");
     let h1 = document.createElement("h1");
+    h1.setAttribute("class", "ans_h1");
     h1.innerText = el.topic;
 
     let ans = document.createElement("div");
@@ -42,10 +43,11 @@ let append_data = (data) => {
     //   localStorage.setItem("question_id", JSON.stringify(_id));
     //   // window.location.href = "./afterquestion.html";
     // };
-    let h2 = document.createElement("h2");
+    let h2 = document.createElement("h3");
     h2.innerText = el.question;
     let name = document.createElement("p");
-    name.innerText = el.name;
+    name.setAttribute("class", "name");
+    name.innerText = "asked by" + " " + el.name;
     let p = document.createElement("p");
     let timestamp = el.posted;
 
