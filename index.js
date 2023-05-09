@@ -60,7 +60,9 @@ let imageTag = document.querySelector("#uv");
       console.log(data)
       alert(data.msg)
       if(data.msg =="logout successfull"){
+        localStorage.removeItem("token")
         let logouthide = document.querySelector("#logoutme")
+       
         logouthide.style.display = "none"   
       }
     } catch (error) {
