@@ -43,7 +43,7 @@ console.log(id);
 
 let get_data = async () => {
   try {
-    let data = await fetch(`http://localhost:8080/answer/${id}`, {
+    let data = await fetch(`https://rose-betta-cape.cyclic.app/answer/${id}`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -153,14 +153,17 @@ btn.onclick = async () => {
   try {
     let answer = document.getElementById("answer_2").value;
     let obj = { answer };
-    let data = await fetch(`http://localhost:8080/addanswer/${id}`, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(obj),
-    });
+    let data = await fetch(
+      `https://rose-betta-cape.cyclic.app/addanswer/${id}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(obj),
+      }
+    );
     data = await data.json();
     console.log(data);
     append(data);

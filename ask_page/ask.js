@@ -3,7 +3,7 @@ console.log(token);
 
 let get_data = async () => {
   try {
-    let data = await fetch("http://localhost:8080/allquestions", {
+    let data = await fetch("https://rose-betta-cape.cyclic.app/allquestions", {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -82,17 +82,13 @@ let myfun = (data) => {
   window.location.href = "./afterquestion.html";
 };
 
-
 let redirect = document.querySelector("#ask");
-redirect.addEventListener("click",()=>{
-  window.location.href = "../question.html"
-})
+redirect.addEventListener("click", () => {
+  window.location.href = "../question.html";
+});
 
-
-let indexa = document.querySelector(".loga")
-indexa.addEventListener("click",()=>{
+let indexa = document.querySelector(".loga");
+indexa.addEventListener("click", () => {
   localStorage.removeItem("token");
-  window.location.href = "../index.html"
-
-
-})
+  window.location.href = "../index.html";
+});
