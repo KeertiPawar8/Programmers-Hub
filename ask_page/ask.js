@@ -69,7 +69,6 @@ let append_data = (data) => {
 
     answer_div.append(ans, div);
     container.append(answer_div);
-
   });
 };
 
