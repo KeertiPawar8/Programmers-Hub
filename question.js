@@ -2,18 +2,22 @@ let token = JSON.parse(localStorage.getItem("token")) || null;
 console.log(token);
 
 let send_data = async () => {
+
   let topic = document.querySelector(".topic").value;
   let question = document.querySelector(".question").value;
   if (topic == "" || question == "") {
     alert("please fill all the fields");
     return;
   }
+  else{
+
+
   let obj = {
     topic,
     question,
   };
   try {
-    let data = await fetch("http://localhost:8080/createquestion", {
+    let data = await fetch("http://localhost:8080/createquestion/", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -22,14 +26,24 @@ let send_data = async () => {
       body: JSON.stringify(obj),
     });
     data = await data.json();
-    console.log(data);
+console.log(data)
     alert(data.msg);
   } catch (error) {
     console.log(error);
   }
+}
 };
 
 let btn1 = document.getElementById("btn1");
 btn1.onclick = () => {
   send_data();
+
 };
+
+
+
+let more = document.querySelector(".more")
+more.addEventListener("click",()=>{
+  localStorage.removeItem("token");
+  window.location.href = "./index.html"
+})

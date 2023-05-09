@@ -23,3 +23,91 @@ let imageTag = document.querySelector("#uv");
       window.onload=myslide;
 
     
+
+   let signup = document.querySelector("#signupme")
+   signup.addEventListener("click",myfuncsignup)
+
+   let logout = document.querySelector("#logoutme")
+   logout.addEventListener("click",myfunclogout)
+
+
+   async function myfuncsignup(e){
+  e.preventDefault()
+   window.location.href = "./log.html"
+   }
+
+
+
+   
+   async function myfunclogout(e){
+    e.preventDefault()
+
+
+
+   
+
+    console.log(token)
+   
+    try {
+      let data = await fetch("http://localhost:8080/logout", {
+        method: "GET",
+        headers: {
+          "Content-type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      data = await data.json();
+      console.log(data)
+      alert(data.msg)
+      if(data.msg =="logout successfull"){
+        let logouthide = document.querySelector("#logoutme")
+        logouthide.style.display = "none"   
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
+ 
+
+     }
+
+
+
+     let token =  JSON.parse(localStorage.getItem("token")) || null;
+     let logouthide = document.querySelector("#logoutme")
+if(!token){
+
+  logouthide.style.display = "none"
+}
+else{
+  logouthide.style.display ="block"
+}
+
+
+
+let ask = document.querySelector("#askquestionme")
+ask.addEventListener("click",(e)=>{
+  e.preventDefault()
+  if(!token){
+     alert("please login first")
+  }
+  else{
+
+    window.location.href = "./question.html"
+  }
+})
+
+
+let allques= document.querySelector("#allques")
+allques.addEventListener("click",(e)=>{
+  e.preventDefault()
+  
+  if(!token){
+    alert("please login first")
+ }
+ else{
+
+   window.location.href = "./ask_page/afterquestion.html"
+
+ }
+})

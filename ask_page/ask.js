@@ -81,3 +81,18 @@ let myfun = (data) => {
   localStorage.setItem("question_id", JSON.stringify(data._id));
   window.location.href = "./afterquestion.html";
 };
+
+
+let redirect = document.querySelector("#ask");
+redirect.addEventListener("click",()=>{
+  window.location.href = "../question.html"
+})
+
+
+let indexa = document.querySelector(".loga")
+indexa.addEventListener("click",()=>{
+  localStorage.removeItem("token");
+  window.location.href = "../index.html"
+
+
+})

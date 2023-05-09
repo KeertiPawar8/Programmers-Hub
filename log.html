@@ -61,22 +61,7 @@ let data=await fetch("http://localhost:8080/login",{
 data = await data.json()
 console.log(data)
 localStorage.setItem("token",JSON.stringify(data.token));
-    // window.location.href = "./index.html";
-// .then((res)=>{
-//     console.log(res.json())
-//     return res.json();
-// })
-// .then((res)=>{
-//     // console.log(res.token);
-//     let token=res.token;
-//     console.log(token)
-//     localStorage.setItem("token",token);
-//     window.location.href = "./index.html";
-
-// })
-// .catch((err)=>{
-// console.log(err);
-// })
+    window.location.href = "./index.html";
 
 })
 
@@ -117,7 +102,7 @@ let data= await fetch("http://localhost:8080/signup",{
 })
 
 data= await data.json();
-console.log(data)
+alert(data.msg)
 // .then((res)=>{
 
 //     return res.json();

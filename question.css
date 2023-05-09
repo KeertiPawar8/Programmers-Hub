@@ -206,6 +206,7 @@ outline: none;
     padding: 7px;
     color: white;
     cursor: pointer;
+    margin-top: 10px;
     
 }
 #btn:hover{
@@ -218,6 +219,33 @@ outline: none;
     color: white;
     
 }
+
+
+
+
+#btn1{
+   
+    background-color: rgb(48, 179, 239);
+    border: none;
+    border-radius: 3px;
+    font-size: 10px;
+    padding: 7px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+#btn1:hover{
+  
+    background-color: rgb(68, 122, 247);
+    border: none;
+    border-radius: 3px;
+    font-size: 10px;
+    padding: 7px;
+    color: white;
+    
+}
+
 
 #submit{
     
