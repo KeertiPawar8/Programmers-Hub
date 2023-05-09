@@ -29,8 +29,10 @@ let append_data = (data) => {
     let div = document.createElement("div");
     let h1 = document.createElement("h1");
     h1.innerText = el.topic;
+
     let ans = document.createElement("div");
     ans.innerText = el.answer.length + " " + "Answers";
+
     h1.addEventListener("click", (e) => {
       e.preventDefault();
       myfun(el);
@@ -64,8 +66,10 @@ let append_data = (data) => {
     p.innerText =
       `Date: ${day}-${month}-${year}` + " " + `Time: ${hours}:${minutes}`;
     div.append(h1, h2, name, p);
+
     answer_div.append(ans, div);
     container.append(answer_div);
+
   });
 };
 
