@@ -272,8 +272,19 @@ outline: none;
     display: flex;
     /* justify-content: center; */
     align-items: center;
+    border-bottom: 0.3px solid #0a95ff;
+    /* border-top: 0.3px solid gray; */
 }
 .ans_div>div{
     margin-left: 20px;
     
+}
+
+.ans_h1:hover{
+    cursor: pointer;
+    color: coral;
+}
+
+.name{
+    color: #0a95ff;
 }
