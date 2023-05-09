@@ -60,7 +60,7 @@ let data=await fetch("http://localhost:8080/login",{
 
 data = await data.json()
 console.log(data)
-localStorage.setItem("token",data.token);
+localStorage.setItem("token",JSON.stringify(data.token));
     // window.location.href = "./index.html";
 // .then((res)=>{
 //     console.log(res.json())
