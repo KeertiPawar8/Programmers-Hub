@@ -1,14 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0%;
+    font-family: "Poppins", sans-serif;
+    }
 
 #mid{
     width: 60%;
     margin-left: 20%;
     margin-right: 30%;
+    margin-top: 200px;
+    padding-top: 70px;
+    
 }
 
 #container{
     width: 60%;
-    margin-left: 20%;
+    /* display: flex; */
     margin-right: 30%;
+    margin-bottom: 100px;
 }
 
 #top{
@@ -34,6 +43,7 @@
 
 #ask{
     margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 #top2{
@@ -41,3 +51,243 @@
     justify-content: end;
 }
 
+
+/* navbar
+.nav{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.dropdowns img{
+    margin-left:50px;
+    margin-top: 15px;
+    width: 20px;
+    height: 15px;
+}
+.dropdowns {
+    display: inline-block;
+    position: relative;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    margin-left: 40px;
+    width: 100%;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+  .dropdowns:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a {
+    display: block;
+    color: grey;
+    padding: 5px;
+    text-decoration: none;
+  }
+  .dropdown-content a:hover {
+    color: blue;
+  }
+   */
+
+   
+
+#nav {
+    width: 100%;
+    /* height: 0%; */
+
+    background-color: rgb(231, 237, 237);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px ;
+  
+    display:  flex;
+    justify-content: space-between;
+
+ padding-top: 10px;
+ padding-bottom: 10px;
+ position: fixed;
+}
+#img1{
+ 
+    margin-left: 40px;
+    width: 15px;
+    height: 15px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#img2{
+
+    width: 150px;
+    height: 18px;
+    cursor: pointer;
+}
+#img3{
+
+    /* margin-left: 40px; */
+    width: 20px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+#nav1{
+    display: flex;
+  
+}
+#nav2{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+  
+}
+#nav2>div>p{
+font-size: 10px;
+cursor: pointer;
+}
+
+  
+
+#inp{
+ border: none;
+    width: 250px;
+    height: 16px;
+  
+outline: none;
+    background-color: white;
+}
+#nav1>div{
+    margin-left: 80px;
+    padding-top: 5px;
+    width: 350px;
+    height: 24px;
+    border: 1px solid rgb(149, 145, 145);
+    background-color: white;
+    border-radius: 5px;
+ 
+}
+#nav1>div>button {
+    float: right;
+  
+    margin-top: 0px;
+ 
+    margin-left: 0px;
+    background:white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+
+  #navbar{
+    margin-top: -200px;
+  }
+/* questions */
+  #question{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    gap: 8px;
+    background-color: rgb(231, 237, 237);
+
+}
+#box1{
+   
+
+    width: 25%;
+    height: 300px;
+    /* margin-top: 60px; */
+    padding-top: 20px;
+    padding-left: 30px;
+    border-radius: 3px;
+    background-color: rgb(243, 203, 104);
+
+}
+#box1>button{
+    background-color: rgb(243, 203, 104);
+    border: none;
+    padding: 5px;
+    /* color: azure; */
+    border-radius: 4px;
+    font-size: 10px;
+    cursor: pointer;
+
+}
+#box1>button:hover{
+    background-color: rgb(234, 170, 11);
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+
+}
+#box1>h1{
+    font-size: 15px;
+    color: rgb(8, 1, 42);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#inp1{
+    margin-top: 20px;
+}
+#inp1>input{
+    font-size: 10px;
+    width: 160px;
+    outline: none;
+}
+
+  /* footer */
+
+  #footer{
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    justify-content: space-around;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#foot>h1{
+    font-size: 10px;
+    color: rgb(229, 227, 227);
+    padding-bottom: 30px;
+}
+#foot>ul>li{
+    color: rgb(229, 227, 227);
+    list-style-type: none ;
+    font-size: 10px;
+    padding-top: 6px;
+    
+}
+#foot1>p{
+    color: rgb(229, 227, 227);
+    font-size: 10px;
+   
+
+
+}
+#foot1{
+    display: flex;
+    gap: 7px;
+}
+
+.ans_div{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    border-bottom: 0.3px solid #0a95ff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    /* border-top: 0.3px solid gray; */
+}
+.ans_div>div{
+    margin-left: 20px;
+    
+}
+
+.ans_h1:hover{
+    cursor: pointer;
+    color: coral;
+}
+
+.name{
+    color: #0a95ff;
+}

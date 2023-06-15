@@ -11,9 +11,9 @@
 <body>
     <div id="nav">
         <div id="nav1">
-            <img src="./menu.png" alt="" id="img1">
+            <img src="../menu.png" alt="" id="img1">
 
-            <img src="./logo.png" alt="" id="img2">
+            <img src="../logo.png" alt="" id="img2">
             <div>
                 <input type="text" placeholder="Ask Question ..." id="inp">
                 <button type="submit"><i class="fa fa-search"></i></button id=>
@@ -26,17 +26,17 @@
     
         <div id="nav2">
             <div>
-                <img src="./question.png" alt="" id="img3">
+                <img src="../question.png" alt="" id="img3">
                 <p>User</p >
 
             </div>
             <div>
-                <img src="./qa.png" alt=""  id="img3">
+                <img src="../qa.png" alt=""  id="img3">
                 <p>Question</p >
 
             </div>
             <div>
-                <img src="./logout.png" alt=""  id="img3">
+                <img src="../logout.png" alt=""  id="img3">
                 <p>Logout</p >
 
             </div>
@@ -57,8 +57,9 @@
     <div id="question">
         <div id="box1">
             <h1>Public</h1>
-          <button>Home</button><br>
-          <button>All Question</button><br>
+         
+        <a href="../index.html"><button>Home</button></a>  <br>
+        <a href="../ask_page/ask.html"><button>All Question</button></a>  <br>
           <button>Post  Question</button><br>
           <h1>Collective</h1>
           <button>Explore Collective</button>
@@ -69,73 +70,41 @@
     
               </div>
 
-     
-      
 
 
         </div>
         <div id="box2">
-      
-              
-                  
+         <h1 id ="topic">Topic</h1>
 
-               
-                <div id="box3"> 
-                    <div>
-                        <h1>Top Question</h1>
-                        <div>
-                          
-                        <!-- <button id="btn">Ask Question</button > -->
-                       
-                         
-                         </div>
-
-                    </div>
-
-
-
-
-
-              
-
-                     <form action="">
-                        <div id="box4"> </div>
-                  
-                      
-                            <div id="box5">
-                                <input type="text" id="inp">
-                                <hr>
-                                <input type="text"  id="inp">
-                                <hr>
-
-                                <input type="text" placeholder="search Your Topic ....." id="inp"> </div>
-    
-    
-                          
-                            <div id="box5">
-                                <input type="text" placeholder="Explain Your Details ....." id="inp">
-           
-                                  
-                               </div>
-                        <button id="submit"> Post Your Answer</button >
-
-
-                     </form>
-                 
-
-                 
-                   
-                   
-
-                  
-                 
-                </div>
-                
-                
+         <hr>
          
-            
-      
+<h3 id ="newq"> question</h3>
 
+<hr>
+
+<div id = "askedby">
+    <div>
+        <h4 id = "name"></h4>
+    </div>
+    <div>
+<h4 id = "time"></h4>
+    </div>
+</div>
+
+<hr>
+
+<h4 id = "totalanswers"></h4>
+
+<hr id = "last">
+
+<div id = "main-container">
+
+</div>
+
+
+                       <input type="text" id = "answer_2"/>        
+                        <button id="submit_post"> Post Your Answer</button >
+ 
 
         </div>
     </div>
@@ -263,5 +232,5 @@
 </html>
 
 
-
+<script src="afterquestion.js"></script>
 
