@@ -21,7 +21,8 @@ quesRouter.get("/allquestions",authenticate,async(req,res)=>{
     
     })
 
-
+    
+    
 
     quesRouter.get("/answer/:id",authenticate,async(req,res)=>{
 
@@ -41,10 +42,20 @@ const questionid = req.params.id;
 
 const {answer,userID,name,time} = req.body;
 
+const checkuser = await QueModel.find({_id:questionid})
+console.log(checkuser)
+if(checkuser[0].userID == userID){
+    res.send({msg:"You cannot answer the question published by you."})
+}
+
+else{
+
 const result = await QueModel.updateOne({ "_id": questionid }, { $push: { "answer": { name, answer, userID,time} } })
 
 const allanswer = await QueModel.find({"_id":questionid});
 res.send(allanswer)
+
+}
 
 })
 
