@@ -16,9 +16,28 @@ await question.save()
 
 quesRouter.get("/allquestions",authenticate,async(req,res)=>{
 
-    const allques = await QueModel.find();
-    res.send(allques)
+    try {
+        const { name: titl, page = 1, limit = 20 } = req.query;
     
+        if (req.query.titl == undefined) {
+    
+            let skip = (page - 1) * limit;
+          let skippeddata = await QueModel.find().skip(skip).limit(limit);
+          res.send(skippeddata);
+        } else {
+          let skip = (page - 1) * limit;
+          let skippeddata = await QueModel.find({
+            question: { $regex: req.query.titl, $options: "i" }
+          })
+            .skip(skip)
+            .limit(limit);
+    
+          res.send(skippeddata);
+        }
+      } catch (err) {
+        res.send(err.message);
+      }
+
     })
 
     
