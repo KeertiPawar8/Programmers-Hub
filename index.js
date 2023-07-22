@@ -72,6 +72,7 @@ ask.addEventListener("click", (e) => {
   if (!token) {
     alert("please login first");
   } else {
+    localStorage.removeItem("search");
     window.location.href = "./question.html";
   }
 });
@@ -83,6 +84,22 @@ allques.addEventListener("click", (e) => {
   if (!token) {
     alert("please login first");
   } else {
+    localStorage.removeItem("search");
     window.location.href = "./ask_page/ask.html";
   }
 });
+
+
+
+let searchButton = document.querySelector("#search")
+searchButton.addEventListener("click",searchFunc);
+
+function searchFunc(){
+  let searchData = document.querySelector("#searchk").value;
+ localStorage.setItem("search",JSON.stringify(searchData));
+ if (!token) {
+  alert("please login first");
+} else {
+  window.location.href = "./ask_page/ask.html";
+}
+}
