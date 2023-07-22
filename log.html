@@ -42,24 +42,22 @@
    
     let obj={
         email:email,
-
         pass:password
         
 
     }
-    console.log(obj)
+   console.log(obj)
    
 
-let data=await fetch("https://rose-betta-cape.cyclic.app/login",{
+let data=await fetch("http://localhost:8080/login",{
     method:'POST',
     headers:{
         "Content-type":"application/json"
     },
     body:JSON.stringify(obj)
 })
-
 data = await data.json()
-console.log(data)
+alert(data.msg)
 localStorage.setItem("token",JSON.stringify(data.token));
     window.location.href = "./index.html";
 
@@ -83,8 +81,6 @@ myform2.addEventListener("submit",async(e)=>{
     let obj={
         name:name,
         email:email,
-
-    
         pass:password,
 
       
@@ -93,7 +89,7 @@ myform2.addEventListener("submit",async(e)=>{
     console.log(obj)
    
 
-let data= await fetch("https://rose-betta-cape.cyclic.app/signup",{
+let data= await fetch("http://localhost:8080/signup",{
     method:'POST',
     headers:{
         "Content-type":"application/json"
@@ -103,18 +99,6 @@ let data= await fetch("https://rose-betta-cape.cyclic.app/signup",{
 
 data= await data.json();
 alert(data.msg)
-// .then((res)=>{
-
-//     return res.json();
-// })
-// .then((res)=>{
-//     console.log(res);
-//     window.location.href = "./index.html";
-
-// })
-// .catch((err)=>{
-// console.log(err);
-// })
 
 })
 </script>

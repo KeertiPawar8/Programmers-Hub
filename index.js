@@ -37,7 +37,7 @@ async function myfunclogout(e) {
   console.log(token);
 
   try {
-    let data = await fetch("https://rose-betta-cape.cyclic.app/logout", {
+    let data = await fetch("http://localhost:8080/logout", {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -83,6 +83,6 @@ allques.addEventListener("click", (e) => {
   if (!token) {
     alert("please login first");
   } else {
-    window.location.href = "./ask_page/afterquestion.html";
+    window.location.href = "./ask_page/ask.html";
   }
 });

@@ -3,7 +3,7 @@ console.log(token);
 
 let get_data = async () => {
   try {
-    let data = await fetch("https://rose-betta-cape.cyclic.app/allquestions", {
+    let data = await fetch("http://localhost:8080/allquestions", {
       method: "GET",
       headers: {
         "Content-type": "application/json",

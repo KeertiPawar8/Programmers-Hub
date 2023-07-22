@@ -41,9 +41,10 @@ console.log(token);
 let id = JSON.parse(localStorage.getItem("question_id")) || null;
 console.log(id);
 
+
 let get_data = async () => {
   try {
-    let data = await fetch(`https://rose-betta-cape.cyclic.app/answer/${id}`, {
+    let data = await fetch(`http://localhost:8080/answer/${id}`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -51,15 +52,20 @@ let get_data = async () => {
       },
     });
     data = await data.json();
-    console.log(data);
-    append(data);
+    console.log(data); 
+    if (data.msg == "No answer is present"){
+      document.querySelector("#main-container").innerHTML = data.msg
+    }
+    else{
+      append(data);
+    }
   } catch (error) {
     console.log(error);
   }
 };
 
 get_data();
-// append(data);
+
 
 async function append(data) {
   let topic = data[0].topic;
@@ -154,7 +160,7 @@ btn.onclick = async () => {
     let answer = document.getElementById("answer_2").value;
     let obj = { answer };
     let data = await fetch(
-      `https://rose-betta-cape.cyclic.app/addanswer/${id}`,
+      `http://localhost:8080/addanswer/${id}`,
       {
         method: "POST",
         headers: {
@@ -165,8 +171,16 @@ btn.onclick = async () => {
       }
     );
     data = await data.json();
-    console.log(data);
-    append(data);
+    document.getElementById("answer_2").value = ""
+    if(data.msg == "You cannot answer the question published by you.")
+   
+{
+  alert(data.msg)
+}
+else{
+
+  append(data);
+}
   } catch (error) {
     console.log(error);
   }
