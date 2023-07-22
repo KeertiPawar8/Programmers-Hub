@@ -17,7 +17,7 @@ await question.save()
 quesRouter.get("/allquestions",authenticate,async(req,res)=>{
 
     try {
-        const { name: titl, page = 1, limit = 20 } = req.query;
+        const { name: titl, page = 1, limit = 100 } = req.query;
     
         if (req.query.titl == undefined) {
     
@@ -47,9 +47,9 @@ quesRouter.get("/allquestions",authenticate,async(req,res)=>{
 
         const questionid = req.params.id;
         
-    const answer = await QueModel.find({"_id":questionid})
-
-        res.send(answer)
+    const answer = await QueModel.find({_id:questionid})
+          res.send(answer)
+        
         })
         
 
@@ -62,7 +62,7 @@ const questionid = req.params.id;
 const {answer,userID,name,time} = req.body;
 
 const checkuser = await QueModel.find({_id:questionid})
-console.log(checkuser)
+
 if(checkuser[0].userID == userID){
     res.send({msg:"You cannot answer the question published by you."})
 }

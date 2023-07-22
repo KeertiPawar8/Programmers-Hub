@@ -30,7 +30,7 @@ else{
 
     }
     catch(err){
-        res.send(err)
+        res.send({msg:err})
     }
 }
 
@@ -56,7 +56,7 @@ userRouter.post("/login",async(req,res)=>{
               
                 const token = jwt.sign({userID:user[0]._id, name: user[0].name},process.env.JWT_SECRET)
              
-                res.send({token})
+                res.send({msg:"Login Successful" ,token})
 
 
             }

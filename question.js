@@ -15,7 +15,7 @@ let send_data = async () => {
   };
   try {
     let data = await fetch(
-      "https://rose-betta-cape.cyclic.app/createquestion",
+      "http://localhost:8080/createquestion",
       {
         method: "POST",
         headers: {
