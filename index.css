@@ -205,6 +205,66 @@ h3{
 .chide>p{
   color: white; text-align: center; font-weight:lighter ;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 14px;
 }
+
+.mainf{
+  border: 2px solid red;
+
+  display: flex;background-color: whitesmoke;
+padding-bottom: 40px;
+}
+
+.chidf{
+  border: 2px solid red;
+margin-left: 190px;
+  width: 530px;
+  margin-right: 30px;
+   border-radius: 20px;margin-top: 50px;box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;background-color: rgb(252, 223, 231);
+}
+#img1{
+  margin-left: 95px;margin-top: 60px;margin-bottom: 50px;width: 340px;
+}
+.cont1{
+  width: 400px;margin-left: 65px;
+}
+.cont1>h1{
+  text-align: center;
+
+}
+.text{
+  border: 1px solid red;
+  background-color: whitesmoke;margin-top: 0px;border: 2px solid whitesmoke;
+}
+.text>h2{
+  border: 1px solid red;
+  margin-top: 150px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: lighter;font-size: large;margin-left: 250px;
+}
+#uv{
+  border: 1px solid red;width: 30%;margin-top: 60px;margin-left: 360px;
+}
+.maing{
+  border: 1px solid red;
+  background-color: black;
+}
+.maing>img{
+  border: 1px solid red;
+  margin-top: 100px;width: 250px;margin-left: 500px;margin-bottom: 30px;
+}
+.para2{
+
+  color: white;text-align: center;width: 800px;margin-left: 240px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-bottom: 50px;
+}
+.para2 span{
+  color: orangered;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.btn3{
+  width: 200px;height: 40px;margin-left: 430px;border-radius: 10px;background-color: rgb(17, 24, 243);color: white;font-weight: bold;border: none;  
+}
+.mainh{
+  border: 1px solid red;
+
+  display: flex;margin-top: 90px;
+}
 /* ==========media-queries============== */
 @media only screen and (max-width: 600px) {
 .nav{
@@ -281,5 +341,53 @@ h3{
 
   .maine{
     flex-direction: column;
+  }
+  .mainf{
+    border: 2px solid red;
+  
+    flex-direction: column;
+  
+  }
+  .chidf{
+    margin: auto;
+  }
+  .text>h2{
+ 
+padding-top: 100px;
+margin: auto;
+  }
+  #uv{
+    /* margin: auto; */
+    margin-right: 1000px;
+  }
+  .maing>img{
+    /* width: 30px; */
+margin: auto;
+margin-left: 150px;
+margin-bottom: 20px;
+margin-top: 40px;
+  }
+  .para2{
+    width: 80px;
+
+font-size: 20px;
+margin: auto;
+  }
+  .para2 span{
+
+    font-size: 20px;
+    margin: auto;
+  
+  }
+  .btn3{
+    margin: auto;
+    margin-left:150px ;
+    margin-bottom:40px ;
+margin-top: 20px;
+  }
+  .mainh{
+    border: 1px solid red;
+    flex-direction: column;
+    margin: auto;
   }
 }
