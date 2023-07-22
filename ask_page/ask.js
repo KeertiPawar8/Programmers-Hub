@@ -1,9 +1,39 @@
 let token = JSON.parse(localStorage.getItem("token")) || null;
 console.log(token);
 
-let get_data = async () => {
+let forSearch = JSON.parse(localStorage.getItem("search")) || null;
+if(!forSearch){
+  window.addEventListener("load",()=>{
+    get_data("")
+  })
+}
+else{
+
+  window.addEventListener("load",()=>{
+    get_data(forSearch)
+  })
+}
+
+
+let allData = document.querySelector("#all")
+
+allData.addEventListener("click",()=>{
+    get_data("")
+})
+
+let search = document.querySelector("#search")
+
+search.addEventListener("click",searchFunc);
+function searchFunc(){
+  localStorage.removeItem("search");
+  let searchbar = document.querySelector("#inp").value;
+     get_data(searchbar)
+}
+
+
+let get_data = async (searchbar) => {
   try {
-    let data = await fetch("http://localhost:8080/allquestions", {
+    let data = await fetch(`http://localhost:8080/allquestions?titl=${searchbar}`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -18,7 +48,7 @@ let get_data = async () => {
   }
 };
 
-get_data();
+
 
 let append_data = (data) => {
   let container = document.getElementById("container");
@@ -38,11 +68,7 @@ let append_data = (data) => {
       e.preventDefault();
       myfun(el);
     });
-    // h1.addEventListener= (_id) => {
-    //   console.log(_id);
-    //   localStorage.setItem("question_id", JSON.stringify(_id));
-    //   // window.location.href = "./afterquestion.html";
-    // };
+
     let h2 = document.createElement("h3");
     h2.innerText = "Question : " + el.question;
     let name = document.createElement("p");
