@@ -52,46 +52,7 @@
 }
 
 
-/* navbar
-.nav{
-    display: flex;
-    width: 100%;
-    height: 50px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.dropdowns img{
-    margin-left:50px;
-    margin-top: 15px;
-    width: 20px;
-    height: 15px;
-}
-.dropdowns {
-    display: inline-block;
-    position: relative;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    margin-left: 40px;
-    width: 100%;
-    overflow: auto;
-    background-color: white;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-  }
-  .dropdowns:hover .dropdown-content {
-    display: block;
-  }
-  .dropdown-content a {
-    display: block;
-    color: grey;
-    padding: 5px;
-    text-decoration: none;
-  }
-  .dropdown-content a:hover {
-    color: blue;
-  }
-   */
+
 
    
 
@@ -189,6 +150,27 @@ outline: none;
     display: flex;
     gap: 8px;
     background-color: rgb(231, 237, 237);
+
+}
+
+.home{
+    /* border: 1px solid red; */
+    background-color: rgb(243, 203, 104);
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+
+}
+.home:hover{
+    /* border: 1px solid red; */
+    background-color: rgb(244, 187, 45);
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
 #search{
@@ -297,4 +279,283 @@ height:29px
 
 .name{
     color: #0a95ff;
+}
+
+@media only screen and (max-width: 1000px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+ 
+    
+    #mid{
+
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 30%;
+        margin-top: 200px;
+        padding-top: 70px;
+        
+    }
+    
+    #container{
+    
+        flex-direction: column;
+        width: 100%;
+   
+        margin-right: 30%;
+        margin-bottom: 100px;
+    }
+    
+    #top{
+ 
+        flex-direction: column;
+
+        justify-content: space-between;
+    }
+    
+    .btncol{
+  
+
+        background-color: #0a95ff;
+        color: #ffffff;
+        padding: 5px;
+        border: 0px;
+        width: 100px;
+        margin-right: 10px;
+        border-radius: 15px;
+    }
+    
+    .btncol:hover{
+        background-color: coral;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    
+    #ask{
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    
+    #top2{
+        display: flex;
+        justify-content: end;
+    }
+    
+    
+    
+    
+       
+    
+    #nav {
+        width: 100%;
+       background-color: rgb(231, 237, 237);
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px ;
+      
+        display:  flex;
+        justify-content: space-between;
+    
+     padding-top: 10px;
+     padding-bottom: 10px;
+     position: fixed;
+    }
+    #img1{
+    display: none;
+    }
+    
+    #img2{
+
+        width: 100px;
+        height: 18px;
+        cursor: pointer;
+    }
+    #img3{
+
+        width: 20px;
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    #nav1{
+
+        display: flex;
+      
+    }
+   
+    #nav2{
+   
+        display: flex;
+        justify-content: space-between;
+        margin-right: 40px;
+      
+    }
+    #nav2>div>p{
+  
+    font-size: 10px;
+    cursor: pointer;
+    }
+    
+      
+    
+    #inp{
+  
+     border: none;
+        width: 160px;
+        height: 16px;
+      
+    outline: none;
+        background-color: white;
+    }
+    #nav1>div{
+  
+        margin-left: 20px;
+        padding-top: 5px;
+        width: 180px;
+        height: 24px;
+        border: 1px solid rgb(149, 145, 145);
+        background-color: white;
+        border-radius: 5px;
+     
+    }
+    #nav1>div>button {
+ 
+
+        float: right;
+      
+        margin-top: 0px;
+     
+        margin-left: 0px;
+        background:white;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      #navbar{
+        margin-top: -200px;
+      }
+    /* questions */
+      #question{
+        
+    
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+       display: flex;
+        gap: 8px;
+        background-color: rgb(231, 237, 237);
+    
+    }
+    
+    .home{
+      
+        background-color: rgb(243, 203, 104);
+        margin-top: -20px;
+        border-radius: 20px;
+        border: none;
+        padding: 5px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    
+    }
+    .home:hover{
+  
+        background-color: rgb(244, 187, 45);
+        margin-top: 20px;
+        border-radius: 20px;
+        border: none;
+        padding: 5px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    }
+    #search{
+     width:50px;
+     margin-left: 3px;
+    height:29px
+    
+     
+    }
+    #box1{
+       
+ 
+        flex-direction: column;
+        width: 94.4%;
+        height: 100px;
+     
+        padding-top: 20px;
+        padding-left: 30px;
+        border-radius: 3px;
+        background-color: rgb(243, 203, 104);
+    
+    }
+
+  
+    #box1>h1{
+     display: none;
+    }
+    
+    #inp1{
+    
+        display: none;
+    }
+    #inp1>input{
+       
+        display: none;
+    }
+    
+      /* footer */
+    
+      #footer{
+
+        flex-direction: column;
+        display: flex;
+        background-color: rgb(32, 32, 32);
+        justify-content: space-around;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #foot>h1{
+  
+        text-align: center;
+        margin-top: 30px;
+        font-size: 10px;
+        color: rgb(229, 227, 227);
+        padding-bottom: 30px;
+    }
+    #foot>ul>li{
+
+     margin-left: 270px;
+        color: rgb(229, 227, 227);
+        list-style-type: none ;
+        font-size: 10px;
+        padding-top: 6px;
+        
+    }
+    #foot1>p{
+     display: none;
+       }
+  
+    
+    .ans_div{
+        display: flex;
+   
+        align-items: center;
+        border-bottom: 0.3px solid #0a95ff;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+    }
+    .ans_div>div{
+        margin-left: 20px;
+        
+    }
+    
+    .ans_h1:hover{
+        cursor: pointer;
+        color: coral;
+    }
+    
+    .name{
+        color: #0a95ff;
+    }
+
 }
