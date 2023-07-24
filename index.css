@@ -26,9 +26,15 @@
   margin-top: 3px;
 }
 .dropdown-content {
+    /* border: 2px solid red; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
   display: none;
   position: absolute;
-  margin-left: 40px;
+  margin-top: 15px;
+  /* margin-left: 40px; */
   width: 100%;
   overflow: auto;
   background-color: white;
@@ -438,29 +444,7 @@ text-align: center;
      margin-top: 10px;
   }
   
-  /* #logoutme{
-    border: 2px solid red;
-    height: 30px; width: 60px;color: white;border: none;background-color: rgb(107, 107, 250); 
-    margin-left: 30px;
-    margin-top: 10px;
-  } */
-/* #signupme:hover{
-cursor:pointer;
-border: 2px solid rgb(0, 255, 51)
-} */
-/* #signupme{
-  display: hidden;
-} */
-/* #logoutme{
-  display: hidden;
-} */
-/* .search{
-
-  margin-left: 360px;
-  margin-top: 5px;
-  width: 230px;
-  height: 30px;
-} */
+ 
 .main{
   /* border: 2px solid red; */
   width:600px

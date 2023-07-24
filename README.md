@@ -18,9 +18,6 @@ Programmer's Hub is a question-and-answer website for programmers. It is the fla
 
 ![Home Page](https://i.postimg.cc/Ss6NRFXM/Screenshot-74.png)
 ![Signup /login Page](https://i.postimg.cc/5yQcS19Y/Screenshot-75.png)
-![Ask Question Page](https://i.postimg.cc/qMkzkHkf/Screenshot-1588.png)
-![Questions Page](https://i.postimg.cc/PfSS4hVK/Screenshot-1587.png)
-![Answer Page](https://i.postimg.cc/KYXKhkjf/Screenshot-1589.png)
 
 
 ## Members

@@ -44,7 +44,7 @@ console.log(id);
 
 let get_data = async () => {
   try {
-    let data = await fetch(`http://localhost:8080/answer/${id}`, {
+    let data = await fetch(`https://cheerful-earmuffs-newt.cyclic.app/answer/${id}`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -160,7 +160,7 @@ btn.onclick = async () => {
     let answer = document.getElementById("answer_2").value;
     let obj = { answer };
     let data = await fetch(
-      `http://localhost:8080/addanswer/${id}`,
+      `https://cheerful-earmuffs-newt.cyclic.app/addanswer/${id}`,
       {
         method: "POST",
         headers: {

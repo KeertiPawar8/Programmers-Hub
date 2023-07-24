@@ -15,7 +15,7 @@ let send_data = async () => {
   };
   try {
     let data = await fetch(
-      "http://localhost:8080/createquestion",
+      "https://cheerful-earmuffs-newt.cyclic.app/createquestion",
       {
         method: "POST",
         headers: {
@@ -28,6 +28,7 @@ let send_data = async () => {
     data = await data.json();
     console.log(data);
     alert(data.msg);
+    window.location.href = "./ask_page/ask.html"
   } catch (error) {
     console.log(error);
   }

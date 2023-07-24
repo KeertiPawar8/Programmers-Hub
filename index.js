@@ -37,7 +37,7 @@ async function myfunclogout(e) {
   console.log(token);
 
   try {
-    let data = await fetch("http://localhost:8080/logout", {
+    let data = await fetch("https://cheerful-earmuffs-newt.cyclic.app/logout", {
       method: "GET",
       headers: {
         "Content-type": "application/json",
