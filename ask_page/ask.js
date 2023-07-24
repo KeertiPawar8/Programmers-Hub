@@ -33,7 +33,7 @@ function searchFunc(){
 
 let get_data = async (searchbar) => {
   try {
-    let data = await fetch(`http://localhost:8080/allquestions?titl=${searchbar}`, {
+    let data = await fetch(`https://cheerful-earmuffs-newt.cyclic.app/allquestions?titl=${searchbar}`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",
