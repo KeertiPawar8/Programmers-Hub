@@ -63,7 +63,9 @@
 .logoimg{
   /* border: 1px solid red; */
   margin-bottom: 12px;
-  width: 30px;
+  margin-top: 10px;
+
+  width: 200px;
 }
 #searchdiv{
   /* border: 1px solid rgb(25, 167, 77);  */
@@ -460,6 +462,7 @@ border: 2px solid rgb(0, 255, 51)
   height: 30px;
 } */
 .main{
+  /* border: 2px solid red; */
   width:600px
 }
 #parent{
@@ -470,8 +473,8 @@ border: 2px solid rgb(0, 255, 51)
 }
 .maina{
 
-  border: 2px solid rgb(57, 26, 208);
-;
+  /* border: 2px solid rgb(57, 26, 208); */
+
 /* margin-top: 90px; */
 margin-bottom: 80px;
   margin: auto;
